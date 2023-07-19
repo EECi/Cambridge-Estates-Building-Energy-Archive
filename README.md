@@ -1,6 +1,6 @@
 # Cambridge University Estates building electricity usage 2010-2019
 
-ToDo: Fill out description of dataset.
+ToDo: Fill out description of dataset. Explain format is used for CityLearn compatibility - maybe shift the bulk of contents explanation to the CityLearn docs.
 
 ## Citation
 

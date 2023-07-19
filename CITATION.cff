@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+authors:
+  - family-names: Langtry
+    given-names: Max
+    orcid: https://orcid.org/0009-0008-6443-0954
+  - family-names: Choudhary
+    given-names: Ruchi
+title: "Cambridge University Estates building electricity usage 2010-2019"
+version: 1.0
+date-released: "2023-07-19"

@@ -9,7 +9,7 @@ ToDo: Fill out description of dataset. Explain format is used for CityLearn comp
   author = {Langtry, Max and Choudhary, Ruchi},
   month = jul,
   title = {{Cambridge University Estates building electricity usage 2010-2019}},
-  version = {1.0},
+  version = {1.1},
   year = {2023},
   howpublished = "\url{https://github.com/EECi/Cambridge-Estates-Building-Energy-Archive}",
 }

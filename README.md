@@ -32,25 +32,31 @@ Info: Data taken from Bedford measurement station (closest Met Office location w
 
 Variables: `Diffuse Solar Radiation [W/m2]`, `Direct Solar Radiation [W/m2]`, `Solar Generation [W/kW]`
 
-Source: [renewables.ninja](https://www.renewables.ninja/) [[3]](#2) & [[4]](#2)
+Source: [renewables.ninja](https://www.renewables.ninja/) [[3]](#3) & [[4]](#4)
 
-Info:
+Info: Data retrieved from API for location in central Cambridge with default solar panel model parameters.
 
 ## Electricity Pricing
 
 Variables: `Electricity Pricing [£/kWh]` (+ predictions)
 
-Source:
+Source: [Energy Stats UK](https://energy-stats.uk/) [[5]](#5)
 
-Info:
+Info: "Energy Stats is my hobby website that ... uses the Octopus Energy open API calls to summarise both historical and daily energy tariff data". All available historic data for the Agile Octopus import tariff for the Eastern England region (containing Cambridge) was accessed. Of this the data for 2019 to 2022 was extended through cyclic repetition to produce the required no. of years of electricity pricing data for each dataset. The Agile Octopus tariff data was used as it is the most readily accessible realtime electricity pricing dataset in the UK, and provides a reasonable estimate of the price a building level energy user would pay for electricity.
 
 ## Grid Carbon intensity
 
 Variables: `kg_CO2/kWh`
 
-Source:
+Source: National Grid ESO Data Portal [[6]](#6)
+
+Info: Data records (estimates of) carbon dioxide emissions of UK electrical grid per kilowatt hour of electricity consumed. Data available at hourly resolution. From source - the data "has seasonal decomposition applied to correct missing or irregular data points", and "is subject to change due to a data cleansing process taking place to provide the most accurate figures".
+
+<br>
 
 ## Citation
+
+If you use any data provided in this repository please cite it using the following,
 
 ```
 @misc{Langtry_Cambridge_University_Estates_2023,

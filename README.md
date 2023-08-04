@@ -34,7 +34,7 @@ Variables: `Diffuse Solar Radiation [W/m2]`, `Direct Solar Radiation [W/m2]`, `S
 
 Source: [renewables.ninja](https://www.renewables.ninja/) [[3]](#3) & [[4]](#4)
 
-Info: Data retrieved from API for location in central Cambridge with default solar panel model parameters.
+Info: Data retrieved from API for location in central Cambridge with default solar panel model parameters. The renewables.ninja data is generated using reanalysis models of global weather and technology models of solar panels. For more information refer to the provided [documentation](https://www.renewables.ninja/about).
 
 ## Electricity Pricing
 
@@ -42,7 +42,7 @@ Variables: `Electricity Pricing [£/kWh]` (+ predictions)
 
 Source: [Energy Stats UK](https://energy-stats.uk/) [[5]](#5)
 
-Info: "Energy Stats is my hobby website that ... uses the Octopus Energy open API calls to summarise both historical and daily energy tariff data". All available historic data for the Agile Octopus import tariff for the Eastern England region (containing Cambridge) was accessed. Of this the data for 2019 to 2022 was extended through cyclic repetition to produce the required no. of years of electricity pricing data for each dataset. The Agile Octopus tariff data was used as it is the most readily accessible realtime electricity pricing dataset in the UK, and provides a reasonable estimate of the price a building level energy user would pay for electricity.
+Info: "Energy Stats is [a] hobby website that ... uses the Octopus Energy open API calls to summarise both historical and daily energy tariff data". All available historic data for the Agile Octopus import tariff for the Eastern England region (containing Cambridge) was accessed. Of this, the data for 2019 to 2022 was extended through cyclic repetition to produce the required no. of years of electricity pricing data for each dataset. The Agile Octopus tariff data was used as it is the most readily accessible realtime electricity pricing dataset in the UK, and provides a reasonable estimate of the price a building level energy user would pay for electricity.
 
 ## Grid Carbon intensity
 
@@ -68,6 +68,10 @@ If you use any data provided in this repository please cite it using the followi
   url = {https://github.com/EECi/Cambridge-Estates-Building-Energy-Archive},
 }
 ```
+
+## Acknowledgements
+
+We would like to thank the Cambridge University Estates divison for their help making this data publicly accessible.
 
 ## References
 <a id="1">[1]</a>

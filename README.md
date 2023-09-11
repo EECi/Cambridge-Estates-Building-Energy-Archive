@@ -52,6 +52,12 @@ Source: National Grid ESO Data Portal [[6]](#6)
 
 Info: Data records (estimates of) carbon dioxide emissions of UK electrical grid per kilowatt hour of electricity consumed. Data available at hourly resolution. From source - the data "has seasonal decomposition applied to correct missing or irregular data points", and "is subject to change due to a data cleansing process taking place to provide the most accurate figures".
 
+## Timestamps
+
+Variables: `Timestamp (UTC)`
+
+Info: Timestamp for observations at the given index, in UTC timezone, using `%Y-%m-%d %H:%M:%S` format (see [datetime docs](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes)). Note, observations for all data variables within a dataset are assumed to be taken simulataneously. A single timestamp is provided for all variables, giving the observation time for the measurements at the same index in the observation lists.
+
 <br>
 
 ## Citation

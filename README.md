@@ -1,6 +1,6 @@
 # Cambridge University Estates building electricity usage 2010-2019
 
-This repository hosts a series of datasets of historic building electricity usage from buildings across the Cambridge University Estates covering the period 2010 to 2019 (found in the `datasets` directory). These datasets are formatted to be compatiable with the CityLearn [[1]](#1) environment for building energy control simulation. Detail on this formatting can be found in the [CityLearn documentation](https://www.citylearn.net/overview/dataset.html). All predicted variables are perfect predictions copied from the true data measurements.
+This repository hosts a series of datasets of historic building electricity usage from buildings across the Cambridge University Estates covering the period 2010 to 2019 (found in the `datasets` directory). These datasets are formatted to be compatible with the CityLearn [[1]](#1) environment for building energy control simulation. Detail on this formatting can be found in the [CityLearn documentation](https://www.citylearn.net/overview/dataset.html). All predicted variables are perfect predictions copied from the true data measurements.
 
 The following sections provide information on the source of the data variables within the datasets, and any pre-processing performed.
 
@@ -56,7 +56,7 @@ Info: Data records (estimates of) carbon dioxide emissions of UK electrical grid
 
 Variables: `Timestamp (UTC)`
 
-Info: Timestamp for observations at the given index, in UTC timezone, using `%Y-%m-%d %H:%M:%S` format (see [datetime docs](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes)). Note, observations for all data variables within a dataset are assumed to be taken simulataneously. A single timestamp is provided for all variables, giving the observation time for the measurements at the same index in the observation lists.
+Info: Timestamp for observations at the given index, in UTC timezone, using `%Y-%m-%d %H:%M:%S` format (see [datetime docs](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes)). Note, observations for all data variables within a dataset are assumed to be taken simultaneously. A single timestamp is provided for all variables, giving the observation time for the measurements at the same index in the observation lists.
 
 <br>
 
@@ -68,16 +68,17 @@ If you use any data provided in this repository please cite it using the followi
 @misc{Langtry_Cambridge_University_Estates_2023,
   author = {Langtry, Max and Choudhary, Ruchi},
   month = jul,
-  title = {{Cambridge University Estates building electricity usage 2010-2019}},
+  title = {Cambridge University Estates building electricity usage 2010-2019},
   version = {1.1},
-  year = {2023},
+  year = 2023,
+  doi = {10.5281/zenodo.10708694},
   url = {https://github.com/EECi/Cambridge-Estates-Building-Energy-Archive},
 }
 ```
 
 ## Acknowledgements
 
-We would like to thank the Cambridge University Estates divison for their help making this data publicly accessible.
+We would like to thank the Cambridge University Estates division for their help making this data publicly accessible.
 
 ## References
 <a id="1">[1]</a>

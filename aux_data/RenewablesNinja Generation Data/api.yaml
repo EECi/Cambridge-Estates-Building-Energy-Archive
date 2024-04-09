@@ -1,0 +1,3 @@
+credentials:
+  token: 'your_api_token_here'
+  url: 'https://www.renewables.ninja/api/data'

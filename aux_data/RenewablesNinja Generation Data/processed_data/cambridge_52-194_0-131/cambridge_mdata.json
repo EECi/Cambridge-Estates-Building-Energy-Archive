@@ -1,0 +1,52 @@
+{
+    "location": "cambridge",
+    "data_path": "processed_data/cambridge_52-194_0-131",
+    "years": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+    ],
+    "RN_mdata": {
+        "units": {
+            "time": "UTC",
+            "electricity": "kW",
+            "irradiance_direct": "unknown",
+            "irradiance_diffuse": "unknown",
+            "temperature": "\u00baC"
+        },
+        "params": {
+            "lat": "52.194",
+            "lon": "0.131",
+            "date_from": "2023-01-01",
+            "date_to": "2023-12-31",
+            "dataset": "merra2",
+            "capacity": "1",
+            "system_loss": "0",
+            "tracking": "2",
+            "tilt": "0",
+            "azim": "180",
+            "raw": true
+        }
+    }
+}

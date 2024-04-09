@@ -1,0 +1,40 @@
+Conventions,G,BADC-CSV,1
+title,G,Midas Open: Station capability information for uk-hourly-weather-obs
+comments,G,This file documents the range of identifier types associated with a unique station in this version of the dataset
+comments,G,A station may be associated with different identifiers relating to different reporting roles
+comments,G,The MIDAS src_id is used as a consistent and unique identifier for a station throughout MIDAS-open datasets
+source,G,Met Office MIDAS database
+creator,G,Met Office
+activity,G,Met Office MIDAS Open: UK Land Surface Stations Data
+feature_type,G,point collection
+collection_name,G,midas-open
+collection_version_number,G,dataset-version-202308
+history,G,Created 2023-08-22
+last_revised_date,G,2023-08-22
+observation_station,G,bedford
+historic_county_name,G,bedfordshire
+src_id,G,00461
+location,G,52.227,-0.465
+height,G,85,m
+date_valid,G,1980-01-01 00:00:00,2022-12-31 23:59:59
+coordinate_variable,id,x
+long_name,id,The identifier associated with a particular report type for this station,1
+type,id,int
+comments,id,This is the numerical identifier
+long_name,id_type,The identifier type associated with a particular reporting capability for this station,1
+type,id_type,char
+comments,id_type,This identifies the group of reporting types (or capabilities) this identifier belongs to
+long_name,met_domain_name,message type,1
+type,met_domain_name,char
+comments,met_domain_name,For more information on message types see the MIDAS documentation
+long_name,first_year,first year of data associated with this id/id_type in this version of this dataset,year
+type,first_year,float
+long_name,last_year,last year of data associated with this id/id_type in this version of this dataset,year
+type,last_year,float
+data
+id,id_type,met_domain_name,first_year,last_year
+03558,WMO,SYNOP,1980,1994
+03560,WMO,SYNOP,1987,2022
+3439,DCNN,HSUN3445,1981,1982
+3439,DCNN,DLY3208,1994,1994
+end data

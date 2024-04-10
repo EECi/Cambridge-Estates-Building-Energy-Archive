@@ -1,18 +1,33 @@
 # Cambridge University Estates building energy usage archive (2000-2023)
 
-This repository hosts a dataset of historic building energy usage (electricity and gas) from buildings across the Cambridge University Estates covering the period 2000 to 2023. ... more info ...
+This repository hosts a dataset of historic building energy usage (electricity and gas) from buildings across the Cambridge University Estates covering the period 2000 to 2023. The electricity usage data includes lighting, plug loads, and plant equipment electricity consumption. It is assumed that for the period covered, none of the buildings have heat pumps installed, and so the gas usage data corresponds to the total heating energy usage for the buildings.
 
-... tool provided for creating datasets ... that are in a format compatible with the CityLearn [[1]](#1) environment for building energy control simulation. Detail on this formatting can be found in the [CityLearn documentation](https://www.citylearn.net/overview/dataset.html). All predicted variables are perfect predictions copied from the true data measurements.
+Tools are provided for identifying and constructing building energy datasets that are in a format compatible with the CityLearn [[1]](#1) environment for building energy control simulation. Detail on this formatting can be found in the [CityLearn documentation](https://www.citylearn.net/overview/dataset.html). All predicted variables are perfect predictions copied from the true data measurements.
 
-... `DataSources.md` ... provides information on the source of the data variables within the datasets, and any pre-processing performed.
+`DataSources.md` provides details of the source of the data variables within the datasets, and any pre-processing performed.
 
 ## Updates for Version 2
 
-...
+Version 2 of this dataset provides two major updates:
+  1. Gas usage data is provided for all buildings where it is available.
+  2. The dataset is expanded to include more buildings and more years of data. Some buildings from Version 1 are removed.
+
+NOTE: the annonymised building IDs in Version 2 *do not* correspond to the building IDs in Version 1.
 
 ## Note on Data Processing
 
-... pre-processing and screening very light, lots of messiness remaining in data, suggest good pickings for data quality research (imputation, change-point detection, etc.) ...
+Very lightweight pre-processing is performed on the energy usage data obtained from the Cambridge University Estates building monitoring systems.
+
+There are two key steps:
+  1. The data is screened for years with sufficient data availability and visually inspected data quality.
+  2. Missing data is replaced with zeros (for compatibility with the CityLearn environment).
+
+Further detail on pre-processing is available in `DataSources.md`.
+
+As a result, the provided data contains substantial real-world 'messiness'. These data quality and availability issues are common in practical building monitoring systems. Hence, this dataset provides opportunity for the study of data quality issues in building energy management. The following studies are suggested:
+  - Data missingness/validity detection and data imputation
+  - Change-point detection for building/occupant behaviour changes
+  - Building control scheme robustness (i.e. stability under unreliable input data)
 
 ## Directory Structure
 

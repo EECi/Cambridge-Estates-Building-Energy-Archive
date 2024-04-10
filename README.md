@@ -1,5 +1,7 @@
 # Cambridge University Estates building energy usage archive (2000-2023)
 
+[![DOI](https://zenodo.org/badge/668225188.svg)](https://zenodo.org/doi/10.5281/zenodo.10708693)
+
 This repository hosts a dataset of historic building energy usage (electricity and gas) from buildings across the Cambridge University Estates covering the period 2000 to 2023. The electricity usage data includes lighting, plug loads, and plant equipment electricity consumption. It is assumed that for the period covered, none of the buildings have heat pumps installed, and so the gas usage data corresponds to the total heating energy usage for the buildings.
 
 Tools are provided for identifying and constructing building energy datasets that are in a format compatible with the CityLearn [[1]](#1) environment for building energy control simulation. Detail on this formatting can be found in the [CityLearn documentation](https://www.citylearn.net/overview/dataset.html). All predicted variables are perfect predictions copied from the true data measurements.
@@ -53,7 +55,7 @@ If you use any data provided in this repository please cite it using the followi
   title = {Cambridge University Estates building energy usage archive},
   version = {2.0},
   year = 2024,
-  doi = {10.5281/zenodo.10708694},
+  doi = {10.5281/zenodo.10955332},
   url = {https://github.com/EECi/Cambridge-Estates-Building-Energy-Archive},
 }
 ```

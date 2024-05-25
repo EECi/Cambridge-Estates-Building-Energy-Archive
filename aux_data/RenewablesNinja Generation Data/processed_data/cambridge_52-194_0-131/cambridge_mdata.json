@@ -42,9 +42,9 @@
             "date_to": "2023-12-31",
             "dataset": "merra2",
             "capacity": "1",
-            "system_loss": "0",
-            "tracking": "2",
-            "tilt": "0",
+            "system_loss": "0.1",
+            "tracking": "0",
+            "tilt": "35",
             "azim": "180",
             "raw": true
         }

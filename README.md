@@ -4,7 +4,7 @@
 
 This repository hosts a dataset of historic building energy usage (electricity and gas) from buildings across the Cambridge University Estates covering the period 2000 to 2023. The electricity usage data includes lighting, plug loads, and plant equipment electricity consumption. It is assumed that for the period covered, none of the buildings have heat pumps installed, and so the gas usage data corresponds to the total heating energy usage for the buildings.
 
-Tools are provided for identifying and constructing building energy datasets that are in a format compatible with the CityLearn [[1]](#1) environment for building energy control simulation. Detail on this formatting can be found in the [CityLearn documentation](https://www.citylearn.net/overview/dataset.html). All predicted variables are perfect predictions copied from the true data measurements.
+Tools are provided for identifying and constructing building energy datasets that are in a format compatible with the CityLearn environment for building energy control simulation. Detail on this formatting can be found in the [CityLearn documentation](https://www.citylearn.net/overview/dataset.html). All predicted variables are perfect predictions copied from the true data measurements.
 
 `DataSources.md` provides details of the source of the data variables within the datasets, and any pre-processing performed.
 
@@ -15,6 +15,10 @@ Version 2 of this dataset provides two major updates:
   2. The dataset is expanded to include more buildings and more years of data. Some buildings from Version 1 are removed.
 
 NOTE: the annonymised building IDs in Version 2 *do not* correspond to the building IDs in Version 1.
+
+## Version 2.1
+
+Solar panel model parameters for Renewables.Ninja API call adjusted to make solar generation data more realistic (defaults from web portal used). Previously solar generation data was overly optimistic with excessively high capacity factors due to use of optimal tracking & tilt option.
 
 ## Note on Data Processing
 
@@ -51,9 +55,9 @@ If you use any data provided in this repository please cite it using the followi
 ```
 @misc{langtry2024CambridgeUniversityEstates,
   author = {Langtry, Max and Choudhary, Ruchi},
-  month = apr,
+  month = may,
   title = {Cambridge University Estates building energy usage archive},
-  version = {2.0},
+  version = {2.1},
   year = 2024,
   doi = {10.5281/zenodo.10955332},
   url = {https://github.com/EECi/Cambridge-Estates-Building-Energy-Archive},

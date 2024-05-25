@@ -1,4 +1,4 @@
-cff-version: 2.0.0
+cff-version: 2.1.0
 message: "If you use this dataset, please cite it as below."
 authors:
   - family-names: Langtry
@@ -8,6 +8,6 @@ authors:
     given-names: Ruchi
 title: "Cambridge University Estates building energy usage archive"
 doi: 10.5281/zenodo.10955332
-version: 2.0
-date-released: "2024-04-10"
+version: 2.1
+date-released: "2024-05-25"
 url: "https://github.com/EECi/Cambridge-Estates-Building-Energy-Archive"

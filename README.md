@@ -40,6 +40,7 @@ As a result, the provided data contains substantial real-world 'messiness'. Thes
 - `building_data`
   - `processed_data`; pre-processed electricity and gas data for each building (csv files for each available year of data)
   - `find_cont_datasets.ipynb`; script of identifying sets of buildings with data available over continuous time periods
+  - `summarise_building_data.ipynb`; script for reporting and visualising summary data on building data availability
   - `view_building_data.py`; script for visualising building data time series
   - `viz_data_availability.py`; script for visualising data availability across buildings
 - `aux_data`; pre-processed data for weather, solar, electricity pricing, and grid carbon intensity (csv files for each available year of data) + scripts for gathering and processing data

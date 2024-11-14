@@ -52,64 +52,44 @@ if __name__ == '__main__':
         [[1 if y in building_years['gas'][bid] else 0 for y in years] for bid in building_ids],
         dtype=float
     ).T
-    combined_year_matrix = np.logical_and(elec_year_matrix, gas_year_matrix).astype(float)
-
-    for y in [2020]:
-        for n,id in enumerate(building_ids):
-            if elec_year_matrix[years.index(y),n] == 1:
-                elec_year_matrix[years.index(y),n] = 0.5
-            if gas_year_matrix[years.index(y),n] == 1:
-                gas_year_matrix[years.index(y),n] = 0.5
-            if combined_year_matrix[years.index(y),n] == 1:
-                combined_year_matrix[years.index(y),n] = 0.5
 
 
     # create heat map plots
-    bvals = [0,0.33,0.66,1]
-    colors = ['white','gray','black']
+    bvals = [0,0.25,0.5,0.75,1]
+    #colors = ['xkcd:light grey','xkcd:light orange','xkcd:bright blue','xkcd:grass green']
+    colors = ['#d8dcd6','#fdaa48','#0165fc','#3f9b0b']
     dcolorsc = []
     for k in range(len(colors)):
         dcolorsc.extend([[bvals[k],colors[k]],[bvals[k+1],colors[k]]])
-    tickvals = [0.165,0.5,0.835]
-    ticktext = ['No','COVID','Yes']
+    tickvals = [0.125,0.375,0.625,0.875]
+    ticktext = ['None','Gas','Electricity','Both']
 
-    for type in ['elec','gas','comb']:
-        if type == 'elec':
-            data_year_matrix = elec_year_matrix
-            title_name = 'Electricity'
-        elif type == 'gas':
-            data_year_matrix = gas_year_matrix
-            title_name = 'Gas'
-        elif type == 'comb':
-            data_year_matrix = combined_year_matrix
-            title_name = 'Combined'
-
-        fig = go.Figure(
-            data = go.Heatmap(
-                z = data_year_matrix,
-                x = building_ids,
-                y = years,
-                hovertemplate =
-                    '<i>Building ID</i>: b%{x}'+
-                    '<br><i>Year</i>: %{y}<br>'+
-                    '<b>Availability</b>: %{z}<extra></extra>',
-                colorscale = dcolorsc,
-                colorbar = dict(
-                    tickvals = tickvals,
-                    ticktext = ticktext
-                )
+    fig = go.Figure(
+        data = go.Heatmap(
+            z = 0.625*elec_year_matrix+0.375*gas_year_matrix,
+            x = building_ids,
+            y = years,
+            hovertemplate =
+                '<i>Building ID</i>: b%{x}'+
+                '<br><i>Year</i>: %{y}<br>'+
+                '<b>Availability</b>: %{z}<extra></extra>',
+            colorscale = dcolorsc,
+            colorbar = dict(
+                tickvals = tickvals,
+                ticktext = ticktext
             )
         )
-        fig.update_layout(
-            title = '%s Data Availability'%title_name,
-            xaxis_title = 'Building ID',
-            yaxis_title = 'Year',
-            yaxis = dict(
-                tickvals = years
-            ),
-            xaxis_nticks = len(building_ids)
-        )
-        fig.show()
+    )
+    fig.update_layout(
+        title = 'Building Data Availability',
+        xaxis_title = 'Building ID',
+        yaxis_title = 'Year',
+        yaxis = dict(
+            tickvals = years
+        ),
+        xaxis_nticks = len(building_ids),
+    )
+    fig.show()
 
-        # save plot
-        fig.write_html(os.path.join('plots',f'data_availability_{type}.html'))
+    # save plot
+    fig.write_html(os.path.join('plots','building_data_availability.html'))

@@ -4,7 +4,7 @@
 
 This repository hosts a dataset of historic building energy usage (electricity and gas) from buildings across the Cambridge University Estates covering the period 2000 to 2023. The electricity usage data includes lighting, plug loads, and plant equipment electricity consumption. It is assumed that for the period covered, none of the buildings have heat pumps installed, and so the gas usage data corresponds to the total heating energy usage for the buildings.
 
-An interactive visualisation of the available data can be found at [EECi.github.io/Cambridge-Estates-Building-Energy-Archive/building_data_summary.html](https://EECi.github.io/Cambridge-Estates-Building-Energy-Archive/building_data_summary.html).
+Interactive plots visualising the available data can be found at [EECi.github.io/Cambridge-Estates-Building-Energy-Archive](https://EECi.github.io/Cambridge-Estates-Building-Energy-Archive/).
 
 Tools are provided for identifying and constructing building energy datasets that are in a format compatible with the CityLearn environment for building energy control simulation. Detail on this formatting can be found in the [CityLearn documentation](https://www.citylearn.net/overview/dataset.html). All predicted variables are perfect predictions copied from the true data measurements.
 

@@ -7,3 +7,5 @@ This page provides figures for interacting with the Cambridge Estates building e
 A visual summary of the data set is available [here](https://EECi.github.io/Cambridge-Estates-Building-Energy-Archive/building_data_summary.html).
 
 A visualisation of the data availability in each building is available [here](https://EECi.github.io/Cambridge-Estates-Building-Energy-Archive/building_data_availability.html).
+
+An example plot of the energy usage data for building 40, created using the `view_building_data.py` script, is available [here](https://EECi.github.io/Cambridge-Estates-Building-Energy-Archive/example_building_data_40.html).

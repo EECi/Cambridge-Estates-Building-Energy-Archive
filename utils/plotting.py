@@ -1,4 +1,4 @@
-"""Visualise electricity and gas data for a selected building."""
+"""Helper functions for plotting data."""
 
 import os
 import pandas as pd
@@ -21,15 +21,18 @@ def fill_missing_times(df):
 
 def visualise_building_data(building_id, fpath='temp.html', show=False):
 
-    building_dir = os.path.join('processed_data', f'UCam_Building_b{building_id}')
+    building_dir = os.path.join('building_data', 'processed_data', f'UCam_Building_b{building_id}')
     elec_dir = os.path.join(building_dir, 'electricity')
     gas_dir = os.path.join(building_dir, 'gas')
 
     # gather data for plotting
-    elec_csvs = [f for f in os.listdir(elec_dir) if (os.path.isfile(os.path.join(elec_dir, f))) and (f.endswith('.csv'))]
-    elec_data = pd.concat([pd.read_csv(os.path.join(elec_dir, f)) for f in elec_csvs], ignore_index=True)
-    elec_data['datetime'] = pd.to_datetime(elec_data['datetime'])
-    elec_data = fill_missing_times(elec_data)
+    if os.path.exists(elec_dir):
+        elec_csvs = [f for f in os.listdir(elec_dir) if (os.path.isfile(os.path.join(elec_dir, f))) and (f.endswith('.csv'))]
+        elec_data = pd.concat([pd.read_csv(os.path.join(elec_dir, f)) for f in elec_csvs], ignore_index=True)
+        elec_data['datetime'] = pd.to_datetime(elec_data['datetime'])
+        elec_data = fill_missing_times(elec_data)
+    else:
+        elec_data = None
 
     if os.path.exists(gas_dir):
         gas_csvs = [f for f in os.listdir(gas_dir) if (os.path.isfile(os.path.join(gas_dir, f))) and (f.endswith('.csv'))]
@@ -43,13 +46,14 @@ def visualise_building_data(building_id, fpath='temp.html', show=False):
     # create plot
     fig = make_subplots(specs=[[{"secondary_y": True}]])
 
-    fig.add_trace(go.Scatter(
-        x=elec_data['datetime'], y=elec_data['equipment load [kWh]'],
-        name='Equipment load',
-        connectgaps=False
-        ),
-        secondary_y=False
-    )
+    if elec_data is not None:
+        fig.add_trace(go.Scatter(
+            x=elec_data['datetime'], y=elec_data['equipment load [kWh]'],
+            name='Equipment load',
+            connectgaps=False
+            ),
+            secondary_y=False
+        )
 
     if gas_data is not None:
         fig.add_trace(go.Scatter(
@@ -74,8 +78,8 @@ def visualise_building_data(building_id, fpath='temp.html', show=False):
             )
         )
 
-    fig.update_yaxes(title_text="Equipment load [kWh]", secondary_y=False)
-    fig.update_yaxes(title_text="Heating load [kWh]", secondary_y=True)
+    fig.update_yaxes(title_text="Equipment load (kWh)", secondary_y=False)
+    fig.update_yaxes(title_text="Heating load (kWh)", secondary_y=True)
 
     fig.update_xaxes(
         rangeselector=dict(
@@ -98,18 +102,3 @@ def visualise_building_data(building_id, fpath='temp.html', show=False):
 
     if show:
         fig.show()
-
-
-if __name__ == '__main__':
-    import time
-
-    # iterable of building ids to visualise data
-    ids = range(121)
-
-    for id in ids:
-        time.sleep(1)
-        building_id = id
-        fpath = 'temp.html'
-        show = True
-
-        visualise_building_data(building_id,fpath,show)
